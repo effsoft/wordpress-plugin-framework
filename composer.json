@@ -14,7 +14,8 @@
       "hashids/hashids": "~3.0.0",
       "guzzlehttp/guzzle": "6.3.3",
       "smarty/smarty":"~3.1",
-      "symfony/filesystem":"~5.0"
+      "symfony/filesystem":"~5.0",
+      "rlanvin/php-form": "2.*"
     },
     "require-dev": {
       

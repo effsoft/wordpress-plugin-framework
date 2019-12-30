@@ -2,6 +2,8 @@
 
 namespace wordpress\plugin\framework;
 
+use wordpress\plugin\entity\WPAction;
+
 class WordEnqueue{
 
     public $plugin_file = null;
@@ -19,11 +21,11 @@ class WordEnqueue{
         $this->enqueues = $enqueues;
         foreach ($this->enqueues as $key=>$eq){
             if ($key === 'admin'){
-                add_action('admin_enqueue_scripts',array($this,'enqueueAdmin'));
+                add_action(WPAction::ADMIN_ENQUEUE_SCRIPTS,array($this,'enqueueAdmin'));
             }else if ($key === 'login'){
-                add_action('login_enqueue_scripts',array($this,'enqueueLogin'));
+                add_action(WPAction::LOGIN_ENQUEUE_SCRIPTS,array($this,'enqueueLogin'));
             }else if ($key === 'wp'){
-                add_action('wp_enqueue_scripts',array($this,'enqueueWp'));
+                add_action(WPAction::WP_ENQUEUE_SCRIPTS,array($this,'enqueueWp'));
             }
         }
 

@@ -25,7 +25,7 @@ class WordHook
                     $this->plugin_file,
                     [
                         $hook_instance,
-                        'hook',
+                        'hook'
                     ]
                 );
             } else if ($key === 'deactivation') {
@@ -34,7 +34,7 @@ class WordHook
                     $this->plugin_file,
                     [
                         $hook_instance,
-                        'hook',
+                        'hook'
                     ]
                 );
             }

@@ -1,8 +1,7 @@
 <?php
+namespace wordpress\plugin\helpers;
 
-namespace wordpress\plugin\framework;
-
-class WordPlugin{
+class PluginHelper{
     public static function get_plugin_dir_path($file)
     {
         return plugin_dir_path($file);

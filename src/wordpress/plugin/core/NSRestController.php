@@ -15,5 +15,4 @@ class NSRestController extends NSBase {
         }
         $this->plugin_file = $file;
     }
-
 }

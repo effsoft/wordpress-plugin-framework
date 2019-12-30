@@ -10,7 +10,7 @@ class WordMenuPage{
 
     public $plugin_file = null;
 
-    public $pages;
+    public $pages = [];
 
     public function __construct($file)
     {
@@ -24,13 +24,17 @@ class WordMenuPage{
 
     public function addPages(array $pages){
         $this->pages = $pages;
-        (new WordAction($this->plugin_file))->add(WPAction::get(WPAction::ADMIN_MENU),[
-            $this,
-            'register'
-        ]);
+        return $this;
     }
 
     public function register(){
+        (new WordAction($this->plugin_file))->add(WPAction::get(WPAction::ADMIN_MENU),[
+            $this,
+            '_register'
+        ]);
+    }
+
+    public function _register(){
         if (empty($this->pages)){
             return $this;
         }
