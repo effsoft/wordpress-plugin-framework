@@ -2,10 +2,9 @@
 
 namespace wordpress\plugin\core;
 
-class NSController extends NSBase {
+class WPFRoute extends WPFBase {
 
     public $plugin_file;
-    public $view;
 
     public function __construct($file)
     {
@@ -14,11 +13,6 @@ class NSController extends NSBase {
             echo 'Please specify the entry file of the plugin!';
             exit;
         }
-        $this->view = new NSView($file);
         $this->plugin_file = $file;
-    }
-
-    public function render($tpl,$data = []){
-        return $this->view->render($tpl,$data);
     }
 }

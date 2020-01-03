@@ -49,17 +49,4 @@ class Bootstrap{
             (new WordRest($this->plugin_file))->addRests($this->config['rests'])->register();
         }
     }
-
-    public function _init_models(){
-        if (empty($this->config['models'])){
-            return;
-        }
-        foreach ($this->config['models'] as $model){
-            $model_instance = new $model;
-            call_user_func([
-                $model_instance,
-                'init'
-            ]);
-        }
-    }
 }

@@ -1,7 +1,7 @@
 {
     "name": "effsoft/wordpress-plugin-framework",
     "description": "",
-    "keywords": [""],
+    "keywords": ["wordpress","plugin","framework"],
     "homepage": "https://github.com/effsoft/wordpress-plugin-framework",
     "type": "framework",
     "license": "MIT",
@@ -9,10 +9,10 @@
     "require": {
       "php": ">=7.2.0",
       "ext-json": "*",
-      "marc-mabe/php-enum": "v2.3.2",
+      "marc-mabe/php-enum": "~v2.3.2",
       "ircmaxell/random-lib": "~1.2.0",
       "hashids/hashids": "~3.0.0",
-      "guzzlehttp/guzzle": "6.3.3",
+      "guzzlehttp/guzzle": "~6.3.3",
       "smarty/smarty":"~3.1",
       "symfony/filesystem":"~5.0",
       "rlanvin/php-form": "2.*"

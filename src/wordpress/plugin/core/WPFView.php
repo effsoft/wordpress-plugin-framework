@@ -6,7 +6,7 @@ use Symfony\Component\Filesystem\Filesystem;
 use wordpress\plugin\framework\WordPlugin;
 use wordpress\plugin\helpers\PluginHelper;
 
-class NSView extends NSBase
+class WPFView extends WPFBase
 {
 
     public $plugin_file = null;
@@ -24,10 +24,11 @@ class NSView extends NSBase
         $this->plugin_file = $file;
 
         $this->smarty = new \Smarty();
-        $this->smarty->caching = \Smarty::CACHING_LIFETIME_CURRENT;
+        $this->smarty->caching = \Smarty::CACHING_OFF;
         $this->smarty->left_delimiter = '<!--{';
         $this->smarty->right_delimiter = '}-->';
         $this->smarty->escape_html = TRUE;
+        $this->smarty->loadFilter('output', 'trimwhitespace');
 
 
         $plugin_path = PluginHelper::get_plugin_dir_path($this->plugin_file);

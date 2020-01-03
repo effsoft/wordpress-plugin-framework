@@ -2,10 +2,11 @@
 
 namespace wordpress\plugin\core;
 
-class NSBase{
+
+class WPFRequest extends WPFBase {
 
     public function __construct()
     {
-        defined('ABSPATH') or die;
+        parent::__construct();
     }
 }

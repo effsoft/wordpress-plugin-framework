@@ -2,9 +2,10 @@
 
 namespace wordpress\plugin\core;
 
-class NSRoute extends NSBase {
+class WPFRestController extends WPFBase {
 
     public $plugin_file;
+    public $model;
 
     public function __construct($file)
     {
@@ -14,5 +15,6 @@ class NSRoute extends NSBase {
             exit;
         }
         $this->plugin_file = $file;
+        $this->model = WPFModel::getInstance();
     }
 }

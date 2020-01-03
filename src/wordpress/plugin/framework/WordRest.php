@@ -41,6 +41,7 @@ class WordRest{
                     new $rest['params']['callback']['class']($this->plugin_file),
                     'action'.$rest['params']['callback']['function'],
                 ],
+                'permission_callback' => $rest['params']['permission_callback'],
                 'args' => $rest['params']['args'],
             ));
         }
