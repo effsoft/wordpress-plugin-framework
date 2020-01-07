@@ -15,7 +15,8 @@
       "guzzlehttp/guzzle": "~6.3.3",
       "smarty/smarty":"~3.1",
       "symfony/filesystem":"~5.0",
-      "rlanvin/php-form": "2.*"
+      "rlanvin/php-form": "2.*",
+      "paquettg/php-html-parser": "~2.1.0"
     },
     "require-dev": {
       
